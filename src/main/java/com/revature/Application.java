@@ -9,6 +9,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+import com.revature.beans.Sender;
+
 @SpringBootApplication
 @EnableEurekaClient
 @EnableScheduling
@@ -17,6 +19,11 @@ public class Application extends SpringBootServletInitializer {
 	@Bean
 	public Queue fooQueue() {
 		return new Queue("trex");
+	}
+	
+	@Bean 
+	public Sender trexSender() {
+		return new Sender();
 	}
 	
 	public static void main(String[] args){
