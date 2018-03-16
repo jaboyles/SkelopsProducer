@@ -4,6 +4,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 
+//This sends a message
 public class Sender {
 	@Autowired
 	private RabbitTemplate rabbitTemplate;
