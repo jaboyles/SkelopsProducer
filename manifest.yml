@@ -1,0 +1,7 @@
+applications:
+- name: cf-skeletor
+  memory: 700M
+  instances: 1
+  no-route: true
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  path: target/SpringBootDemo-0.0.1-SNAPSHOT.jar
