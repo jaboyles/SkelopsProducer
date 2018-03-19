@@ -12,9 +12,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("tRex")
-@Scope("prototype")
-@Entity
-@Table(name="T_REX")
 public class TRex {
 
 	public TRex(String name, String featherColor) {
@@ -26,14 +23,11 @@ public class TRex {
 		super();
 	}
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="tRexSequence")
-	@SequenceGenerator(allocationSize=1,name="tRexSequence",sequenceName="SQ_T_REX_PK")
-	@Column(name="T_REX_ID")
+	
 	private int id;
-	@Column(name="T_REX_NAME")
+	
 	private String name;
-	@Column(name="T_REX_FEATHER_COLOR")
+	
 	private String featherColor;
 	
 	public int getId() {
