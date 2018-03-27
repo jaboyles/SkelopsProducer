@@ -1,5 +1,5 @@
 applications:
-- name: cf-skeletor
+- name: SkelopsProducer
   memory: 700M
   instances: 1
   no-route: true

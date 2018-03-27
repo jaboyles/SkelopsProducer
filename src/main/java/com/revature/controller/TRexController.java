@@ -30,6 +30,7 @@ public class TRexController {
 			s.sendTrex(tRex);
 			resp = new ResponseEntity<>(new Message("T-REX CREATED SUCCESSFULLY"), HttpStatus.OK);
 		} catch (Exception e) {
+			e.printStackTrace();
 			resp = new ResponseEntity<>(new Message("FAILED TO CREATE T-REX"), HttpStatus.BAD_REQUEST);
 		}
 		return resp;
